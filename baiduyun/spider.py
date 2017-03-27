@@ -45,9 +45,27 @@ class spider:
         data = self.httpGet(follow_url, referer)
 
     '''
+        获取用户粉丝
+    '''
+    def getFans(self, uk = 2736848922, limit = 20, start = 0):
+        fans_url = "http://pan.baidu.com/pcloud/friend/getfanslist?query_uk=%s&limit=%d&start=%s&bdstoken=null&channel=chunlei&clienttype=0&web=1&logid=MTQ3NDAzNjQwNzg3OTAuNzM1MzMxMDUyMDczMjYxNA=="%(uk, limit, start)
+        referer = "https://yun.baidu.com/share/home?uk=%d#category/type=0" % (uk)
+        data = self.httpGet(fans_url, referer)
+
+    '''
+        获取用户分享
+    '''
+    def getShare(self, uk = 2618821491, limit = 20, start = 0):
+        share_url = "http://pan.baidu.com/pcloud/feed/getsharelist?t=1474202771918&category=0&auth_type=1&request_location=share_home&start=%d&limit=%d&query_uk=%d&channel=chunlei&clienttype=0&web=1&logid=MTQ3NDIwMjc3MTkxOTAuMzA1NjAzMzQ4MTM1MDc0MTc=&bdstoken=e6f1efec456b92778e70c55ba5d81c3d"%(start, limit, uk)
+        referer = "https://yun.baidu.com/share/home?uk=%d#category/type=0" % (uk)
+        data = self.httpGet(share_url, referer)
+
+    '''
      HTTP GET
     '''
     def httpGet(self, url, referer):
+        print(url)
+        return
         req = request.Request(url)
         # req.add_header("Referer", referer)
         req.add_header("Cookie", "BAIDUID=051EC32730679E51970718104CC16E34:FG=1; BIDUPSID=051EC32730679E51970718104CC16E34; PSTM=1458559356; __cfduid=def9436786194ad595d2da10ac8d1c1311460883577; locale=zh; PSINO=6; H_PS_PSSID=1427_19034_21108_18559_22035_22174_22157")
@@ -110,7 +128,9 @@ class spider:
 
 instance = spider()
 # instance.select()
-instance.getFollower()
+# instance.getFollower()
+# instance.getFans()
+instance.getShare()
 
 '''
 req = urllib.request.Request("http://baidu.com/")
