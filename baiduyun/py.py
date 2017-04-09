@@ -12,11 +12,10 @@ def getHtml(url,ref = None):
         	html = page.read()
         	follows_json = json.loads(html)
         except:
-			print 'time out wait 4 minute'
+			# print('time out wait 4 minute')
 			#time.sleep(4*60)
-			follows_json = {'errno':-1}
-        return follows_json
-		
+			# follows_json = {'errno':-1}
+			# return follow_json
 
 class BaiDuPan(object):
 	def  __init__(self):
@@ -37,7 +36,7 @@ class BaiDuPan(object):
 		return getHtml(fans_url)
 
 	def start(self):
-		follow_json = self.getFollows(2618821491,0)
+		follow_json = self.getShareList(2618821491,0)
 		print(34444)
 		print(follow_json)
 
