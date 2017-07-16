@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width;init-scale=1">
+	<link type="text/css" rel="stylesheet" href="assets/css/tether.min.css">
 	<link type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link type="text/css" rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -11,34 +12,53 @@
 <div class="col-12 header">
 </div>
 <div class="col-12 serach-box">
-	<div class="col-2">
-	</div>
 	<div class="col-8 center jumbotron">
 		<h1>search pan</h1>
 	<form class="form form-inline">
-		<input class="form-control mr-sm-2" type="text" name="keyword">
-		<button class="btn btn-outline-success" type="botton">search</button>
+    <div class="input-group" style="width: 100%;">
+      <input type="text" name="keyword" class="form-control" placeholder="Search for...">
+      <span class="input-group-btn">
+        <button class="btn btn-secondary btn-outline-success" type="button">search</button>
+      </span>
+    </div>
+
 	</form>
 	</div>
 	<div class="col-2">
 	</div>
 </div>
-<div class="col-12 result-box">
-	<ul class="list-group">
-		<li class="list-group-item">
-			<a href="#" target="_block">list1</a>
-		</li>
-		<li class="list-group-item">
-			<a href="#" target="_block">list2</a>
-		</li>
-	</ul>
+	<div class="col-12 result-box">
+		<ul class="list-group">
+			<li class="list-group-item">
+				<a href="#" target="_block">list1</a>
+			</li>
+			<li class="list-group-item">
+				<a href="#" target="_block">list2</a>
+			</li>
+		</ul>
+	</div>
+	<nav aria-label="Page navigation example">
+		<ul class="pagination justify-content-center">
+			<li class="page-item disabled">
+			<a class="page-link" href="#" tabindex="-1">Previous</a>
+			</li>
+			<li class="page-item"><a class="page-link" href="#">1</a></li>
+			<li class="page-item"><a class="page-link" href="#">2</a></li>
+			<li class="page-item"><a class="page-link" href="#">3</a></li>
+			<li class="page-item">
+			<a class="page-link" href="#">Next</a>
+			</li>
+		</ul>
+	</nav>
 </div>
-</div>
+
 <div class="footer col-12 text-muted">
-        <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
-        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+        <p>SoPan is a searching contents for yourself!</p>
+        <p>Like to Contact? <a href="./">Visit the homepage</a> or you can <a href="./">join us</a>.</p>
     </div>
 
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/tether.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 </body>
 </html>

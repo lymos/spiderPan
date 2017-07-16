@@ -1,11 +1,12 @@
 .header{
-	height: 100px;
+	height: 80px;
 }
 .center{
 	margin: 0 auto;
 }
 .result-box{
 	margin-top: 40px;
+	margin-bottom: 20px;
 }
 .jumbotron{
 	background-color: transparent;
